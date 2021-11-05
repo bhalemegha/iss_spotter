@@ -15,7 +15,7 @@ const fetchMyIP = function (callback) {
 }
 
 const fetchCoordsByIP = function (ip, callback) {
-  request('https://api.freegeoip.app/json/?apikey=49456c10-3dcf-11ec-ad48-874f42d38e41', (error, response, body) => {
+  request('https://api.freegeoip.app/json/?apikey=49456c10-3dcf-11ec-ad48-874f42d38e41&ip='+ip, (error, response, body) => {
     if (error) {
       callback(error, null);
     }
